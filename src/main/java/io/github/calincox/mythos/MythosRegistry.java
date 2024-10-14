@@ -120,15 +120,93 @@ public class MythosRegistry
         public static final DeferredItem<Item> ambrosia = ITEMS.registerSimpleItem("ambrosia", new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
-    // Creates a creative tab with the id "mythos:example_tab" for the example item, that is placed after the combat tab
+
+    //METALS AND THEIR RELATED BITS
+        //Celestial Bronze
+            public static final DeferredBlock<Block> celestial_bronze_block = BLOCKS.registerSimpleBlock("celestial_bronze_block", BlockBehaviour.Properties.of().explosionResistance(25));
+            public static final DeferredItem<BlockItem> celestial_bronze_block_item = ITEMS.registerSimpleBlockItem("celestial_bronze_block", celestial_bronze_block);
+            public static final DeferredItem<Item> celestial_bronze_ingot = ITEMS.registerItem("celestial_bronze_ingot", null);
+            public static final DeferredItem<Item> celestial_bronze_nugget = ITEMS.registerItem("celestial_bronze_nugget", null);
+            
+            //CB tools
+            //TODO: make tools functional
+            public static final DeferredItem<Item> celestial_bronze_sword = ITEMS.registerItem("celestial_bronze_sword", null);
+            public static final DeferredItem<Item> celestial_bronze_pickaxe = ITEMS.registerItem("celestial_bronze_pickaxe", null);
+            public static final DeferredItem<Item> celestial_bronze_axe = ITEMS.registerItem("celestial_bronze_axe", null);
+            public static final DeferredItem<Item> celestial_bronze_shovel = ITEMS.registerItem("celestial_bronze_shovel", null);
+            public static final DeferredItem<Item> celestial_bronze_hoe = ITEMS.registerItem("celestial_bronze_hoe", null);
+           
+           //CB Armor
+           //TODO: make armor functional
+            public static final DeferredItem<Item> celestial_bronze_helmet = ITEMS.registerItem("celestial_bronze_helmet", null);
+            public static final DeferredItem<Item> celestial_bronze_chestplate = ITEMS.registerItem("celestial_bronze_chestplate", null);
+            public static final DeferredItem<Item> celestial_bronze_leggings = ITEMS.registerItem("celestial_bronze_leggings", null);
+            public static final DeferredItem<Item> celestial_bronze_boots = ITEMS.registerItem("celestial_bronze_boots", null);
+
+        //Stygian Iron
+            public static final DeferredBlock<Block> stygian_iron_block = BLOCKS.registerSimpleBlock("stygian_iron_block", BlockBehaviour.Properties.of().explosionResistance(25));
+            public static final DeferredItem<BlockItem> stygian_iron_block_item = ITEMS.registerSimpleBlockItem("stygian_iron_block", stygian_iron_block);
+            public static final DeferredItem<Item> stygian_iron_ingot = ITEMS.registerItem("stygian_iron_ingot", null);
+            public static final DeferredItem<Item> stygian_iron_nugget = ITEMS.registerItem("stygian_iron_nugget", null);
+            
+            //SI tools
+            //TODO: make tools functional
+            public static final DeferredItem<Item> stygian_iron_sword = ITEMS.registerItem("stygian_iron_sword", null);
+            public static final DeferredItem<Item> stygian_iron_pickaxe = ITEMS.registerItem("stygian_iron_pickaxe", null);
+            public static final DeferredItem<Item> stygian_iron_axe = ITEMS.registerItem("stygian_iron_axe", null);
+            public static final DeferredItem<Item> stygian_iron_shovel = ITEMS.registerItem("stygian_iron_shovel", null);
+            public static final DeferredItem<Item> stygian_iron_hoe = ITEMS.registerItem("stygian_iron_hoe", null);
+           
+           //SI Armor
+           //TODO: make armor functional
+            public static final DeferredItem<Item> stygian_iron_helmet = ITEMS.registerItem("stygian_iron_helmet", null);
+            public static final DeferredItem<Item> stygian_iron_chestplate = ITEMS.registerItem("stygian_iron_chestplate", null);
+            public static final DeferredItem<Item> stygian_iron_leggings = ITEMS.registerItem("stygian_iron_leggings", null);
+            public static final DeferredItem<Item> stygian_iron_boots = ITEMS.registerItem("stygian_iron_boots", null);
+
+            // Creates a creative tab with the id "mythos:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.mythos")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ambrosia.get().getDefaultInstance())
+           
+           //don't mind me, just going to make a function entirely too long -- here goes nothing! --CMC
             .displayItems((parameters, output) -> {
                 output.accept(ambrosia.get());
                 output.accept(ash.get());
                 output.accept(ichor.get());
+
+                //CB
+                output.accept(celestial_bronze_block_item.get());
+                output.accept(celestial_bronze_ingot.get());
+                output.accept(celestial_bronze_nugget.get());
+                //CB TOOLS
+                output.accept(celestial_bronze_sword.get());
+                output.accept(celestial_bronze_pickaxe.get());
+                output.accept(celestial_bronze_axe.get());
+                output.accept(celestial_bronze_shovel.get());
+                output.accept(celestial_bronze_hoe.get());
+                //CB ARMOR
+                output.accept(celestial_bronze_helmet.get());
+                output.accept(celestial_bronze_chestplate.get());
+                output.accept(celestial_bronze_leggings.get());
+                output.accept(celestial_bronze_boots.get());
+
+                //SI
+                output.accept(stygian_iron_block_item.get());
+                output.accept(stygian_iron_ingot.get());
+                output.accept(stygian_iron_nugget.get());
+                //CB TOOLS
+                output.accept(stygian_iron_sword.get());
+                output.accept(stygian_iron_pickaxe.get());
+                output.accept(stygian_iron_axe.get());
+                output.accept(stygian_iron_shovel.get());
+                output.accept(stygian_iron_hoe.get());
+                //CB ARMOR
+                output.accept(stygian_iron_helmet.get());
+                output.accept(stygian_iron_chestplate.get());
+                output.accept(stygian_iron_leggings.get());
+                output.accept(stygian_iron_boots.get());
                 // Add items and other unique things to the creative menu here. This method is preferred over the event (ln 145) for most things.
             }).build());
 
