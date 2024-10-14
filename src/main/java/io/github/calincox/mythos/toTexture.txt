@@ -1,0 +1,35 @@
+BLOCKS
+    marble
+    polished_marble
+    cut_marble
+    marble_pillar
+    cracked_marble_pillar
+    marble_mosaic
+
+    onyx
+    cobbled_onyx
+    smooth_onyx
+    onyx_brick
+    chiseled_onyx_brick
+    cracked_onyx_brick
+    mossy_onyx_brick
+    onyx_pillar
+    cracked_onyx_pillar
+
+    mycenean_brick
+    chiseled_mycenean_brick
+    mycenean_pillar
+            (These last three are for the Labyrinth, so make sure all 6 sides are functional useful!)
+
+ITEMS  
+    The Master Bolt
+        (3D Model, please! I have a method for this, when you get there.)
+    The Hearth of Hestia
+        essentially a dyable campfire, which means you'll have to make 16 dyable versions of the campfire #sorrynotsorry.
+    Ariadne's String
+        (2D, bauble.)
+    Ichor 
+        blood of the gods (2D droplets)
+    Ambrosia
+        artistic interpretation required (food)
+        
