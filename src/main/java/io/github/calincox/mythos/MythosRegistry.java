@@ -2,6 +2,7 @@ package io.github.calincox.mythos;
 
 import org.slf4j.Logger;
 
+
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
@@ -10,10 +11,14 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -82,31 +87,31 @@ public class MythosRegistry
             public static final DeferredItem<BlockItem> marble_mosaic_item = ITEMS.registerSimpleBlockItem("marble_mosaic", marble_mosaic);
 
         //onyx!
-            public static final DeferredBlock<Block> onyx = BLOCKS.registerSimpleBlock("onyx", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> onyx = BLOCKS.registerSimpleBlock("onyx", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> onyx_item = ITEMS.registerSimpleBlockItem("onyx", onyx );
             // cobbled onyx
-            public static final DeferredBlock<Block> cobbled_onyx = BLOCKS.registerSimpleBlock("cobbled_onyx", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> cobbled_onyx = BLOCKS.registerSimpleBlock("cobbled_onyx", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> cobbled_onyx_item = ITEMS.registerSimpleBlockItem("cobbled_onyx", cobbled_onyx );
             //smooth onyx
-            public static final DeferredBlock<Block> smooth_onyx = BLOCKS.registerSimpleBlock("smooth_onyx", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> smooth_onyx = BLOCKS.registerSimpleBlock("smooth_onyx", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> smooth_onyx_item = ITEMS.registerSimpleBlockItem("smooth_onyx", smooth_onyx );
             //onyx bricks
-            public static final DeferredBlock<Block> onyx_brick = BLOCKS.registerSimpleBlock("onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> onyx_brick = BLOCKS.registerSimpleBlock("onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> onyx_brick_item = ITEMS.registerSimpleBlockItem("onyx_brick", onyx_brick );
             //chiseled onyx bricks
-            public static final DeferredBlock<Block> chiseled_onyx_brick = BLOCKS.registerSimpleBlock("chiseled_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> chiseled_onyx_brick = BLOCKS.registerSimpleBlock("chiseled_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> chiseled_onyx_brick_item = ITEMS.registerSimpleBlockItem("chiseled_onyx_brick", chiseled_onyx_brick );
             //cracked onyx bricks
-            public static final DeferredBlock<Block> cracked_onyx_brick = BLOCKS.registerSimpleBlock("cracked_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> cracked_onyx_brick = BLOCKS.registerSimpleBlock("cracked_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> cracked_onyx_brick_item = ITEMS.registerSimpleBlockItem("cracked_onyx_brick", cracked_onyx_brick );
             //mossy onyx bricks
-            public static final DeferredBlock<Block> mossy_onyx_brick = BLOCKS.registerSimpleBlock("mossy_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> mossy_onyx_brick = BLOCKS.registerSimpleBlock("mossy_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> mossy_onyx_brick_item = ITEMS.registerSimpleBlockItem("mossy_onyx_brick", mossy_onyx_brick );
             //onyx pillars
-            public static final DeferredBlock<Block> onyx_pillar = BLOCKS.registerSimpleBlock("onyx_pillar", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> onyx_pillar = BLOCKS.registerSimpleBlock("onyx_pillar", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> onyx_pillar_item = ITEMS.registerSimpleBlockItem("onyx_pillar", onyx_pillar);
             //cracked onyx pillars
-            public static final DeferredBlock<Block> cracked_onyx_pillar = BLOCKS.registerSimpleBlock("cracked_onyx_pillar", BlockBehaviour.Properties.of().isRedstoneConductor(null).jumpFactor(1/2));
+            public static final DeferredBlock<Block> cracked_onyx_pillar = BLOCKS.registerSimpleBlock("cracked_onyx_pillar", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
             public static final DeferredItem<BlockItem> cracked_onyx_pillar_item = ITEMS.registerSimpleBlockItem("cracked_onyx_pillar", cracked_onyx_pillar);
 
         //FANCYBLOCKS (for labyrinth use)
@@ -132,8 +137,8 @@ public class MythosRegistry
         //Celestial Bronze
             public static final DeferredBlock<Block> celestial_bronze_block = BLOCKS.registerSimpleBlock("celestial_bronze_block", BlockBehaviour.Properties.of().explosionResistance(25));
             public static final DeferredItem<BlockItem> celestial_bronze_block_item = ITEMS.registerSimpleBlockItem("celestial_bronze_block", celestial_bronze_block);
-            public static final DeferredItem<Item> celestial_bronze_ingot = ITEMS.registerItem("celestial_bronze_ingot", null);
-            public static final DeferredItem<Item> celestial_bronze_nugget = ITEMS.registerItem("celestial_bronze_nugget", null);
+            public static final DeferredItem<Item> celestial_bronze_ingot = ITEMS.registerSimpleItem("celestial_bronze_ingot", new Item.Properties());
+            public static final DeferredItem<Item> celestial_bronze_nugget = ITEMS.registerSimpleItem("celestial_bronze_nugget", new Item.Properties());
             
 
 
@@ -145,23 +150,19 @@ public class MythosRegistry
         // The tag that determines what blocks this tool cannot break.
         BlockTags.INCORRECT_FOR_DIAMOND_TOOL ,
         // Determines the durability of the tier.
-        // Stone is 131, iron is 250.
-        1000,
+            1000,
         // Determines the mining speed of the tier. Unused by swords.
-        // Stone uses 4, iron uses 6.
-        8,
+            8,
         // Determines the attack damage bonus. Different tools use this differently. For example, swords do (getAttackDamageBonus() + 4) damage.
-        // Stone uses 1, iron uses 2, corresponding to 5 and 6 attack damage for swords, respectively.
-        2.5f,
+            2.5f,
         // Determines the enchantability of the tier. This represents how good the enchantments on this tool will be.
-        // Gold uses 22, we put CELESTIAL_BRONZE slightly above that.
-        25,
+            25,
         // Determines the repair ingredient of the tier. Use a supplier for lazy initializing.
-        () -> Ingredient.of(celestial_bronze_ingot.get()));
+            () -> Ingredient.of(celestial_bronze_ingot.get())
+        );
 
-        public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
 
-            public static final Supplier<Item> celestial_bronze_sword = ITEMS.register("celestial_bronze_sword", () -> new SwordItem(
+            public static final DeferredItem<SwordItem> celestial_bronze_sword = ITEMS.register("celestial_bronze_sword", () -> new SwordItem(
         // The tier to use.
         CELESTIAL_BRONZE_TIER,
         // The item properties. We don't need to set the durability here because TieredItem handles that for us.
@@ -176,42 +177,213 @@ public class MythosRegistry
                     // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
                     -2.4f
             
+                    )
+            
                 )
             )
-        )
-        );
-            public static final DeferredItem<Item> celestial_bronze_pickaxe = ITEMS.registerItem("celestial_bronze_pickaxe", null);
-            public static final DeferredItem<Item> celestial_bronze_axe = ITEMS.registerItem("celestial_bronze_axe", null);
-            public static final DeferredItem<Item> celestial_bronze_shovel = ITEMS.registerItem("celestial_bronze_shovel", null);
-            public static final DeferredItem<Item> celestial_bronze_hoe = ITEMS.registerItem("celestial_bronze_hoe", null);
+            );
+
+            public static final DeferredItem<PickaxeItem> celestial_bronze_pickaxe = ITEMS.register("celestial_bronze_pickaxe", () -> new PickaxeItem(
+        // The tier to use.
+        CELESTIAL_BRONZE_TIER,
+        // The item properties. We don't need to set the durability here because TieredItem handles that for us.
+            new Item.Properties().attributes(
+            // There are `createAttributes` methods in either the class or subclass of each DiggerItem
+                PickaxeItem.createAttributes(
+                    // The tier to use.
+                    CELESTIAL_BRONZE_TIER,
+                    // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
+                    1,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
+                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
+                    -2.8f
+            
+                    )
+            
+                )
+            )
+            );
+
+            public static final DeferredItem<AxeItem> celestial_bronze_axe = ITEMS.register("celestial_bronze_axe", () -> new AxeItem(
+        // The tier to use.
+        CELESTIAL_BRONZE_TIER,
+            new Item.Properties().attributes(
+                AxeItem.createAttributes(
+                    CELESTIAL_BRONZE_TIER,
+                    // The type-specific attack damage bonus.
+                    3,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4.
+                    -2.4f
+                    )
+                )
+            )
+            );
+            
+            public static final DeferredItem<ShovelItem> celestial_bronze_shovel = ITEMS.register("celestial_bronze_shovel", () -> new ShovelItem(
+        // The tier to use.
+        CELESTIAL_BRONZE_TIER,
+        // The item properties. We don't need to set the durability here because TieredItem handles that for us.
+            new Item.Properties().attributes(
+            // There are `createAttributes` methods in either the class or subclass of each DiggerItem
+                ShovelItem.createAttributes(
+                    // The tier to use.
+                    CELESTIAL_BRONZE_TIER,
+                    // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
+                    1.5f,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
+                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
+                    -3f
+            
+                    )
+            
+                )
+            )
+            );
+            
+            public static final DeferredItem<HoeItem> celestial_bronze_hoe = ITEMS.register("celestial_bronze_hoe", () -> new HoeItem(
+                // The tier to use.
+                CELESTIAL_BRONZE_TIER,
+                    new Item.Properties().attributes(
+                        HoeItem.createAttributes(
+                            CELESTIAL_BRONZE_TIER,
+                            // The type-specific attack damage bonus.
+                            3,
+                            // The type-specific attack speed modifier. The player has a default attack speed of 4.
+                            -2.4f
+                            )
+                        )
+                    )
+                    );
            
            //CB Armor
            //TODO: make armor functional
-            public static final DeferredItem<Item> celestial_bronze_helmet = ITEMS.registerItem("celestial_bronze_helmet", null);
+           /*  public static final DeferredItem<Item> celestial_bronze_helmet = ITEMS.registerItem("celestial_bronze_helmet", null);
             public static final DeferredItem<Item> celestial_bronze_chestplate = ITEMS.registerItem("celestial_bronze_chestplate", null);
             public static final DeferredItem<Item> celestial_bronze_leggings = ITEMS.registerItem("celestial_bronze_leggings", null);
-            public static final DeferredItem<Item> celestial_bronze_boots = ITEMS.registerItem("celestial_bronze_boots", null);
+            public static final DeferredItem<Item> celestial_bronze_boots = ITEMS.registerItem("celestial_bronze_boots", null);*/
 
         //Stygian Iron
             public static final DeferredBlock<Block> stygian_iron_block = BLOCKS.registerSimpleBlock("stygian_iron_block", BlockBehaviour.Properties.of().explosionResistance(25));
             public static final DeferredItem<BlockItem> stygian_iron_block_item = ITEMS.registerSimpleBlockItem("stygian_iron_block", stygian_iron_block);
-            public static final DeferredItem<Item> stygian_iron_ingot = ITEMS.registerItem("stygian_iron_ingot", null);
-            public static final DeferredItem<Item> stygian_iron_nugget = ITEMS.registerItem("stygian_iron_nugget", null);
+            public static final DeferredItem<Item> stygian_iron_ingot = ITEMS.registerSimpleItem("stygian_iron_ingot", new Item.Properties());
+            public static final DeferredItem<Item> stygian_iron_nugget = ITEMS.registerSimpleItem("stygian_iron_nugget", new Item.Properties());
+
+        //SI Tier
+        //TODO: MAKE THE TIER DIFFERENT FROM CB
+        public static final Tier STYGIAN_IRON_TIER = new SimpleTier(
+            // The tag that determines what blocks this tool cannot break.
+            BlockTags.INCORRECT_FOR_DIAMOND_TOOL ,
+            // Determines the durability of the tier.
+                1000,
+            // Determines the mining speed of the tier. Unused by swords.
+                8,
+            // Determines the attack damage bonus. Different tools use this differently. For example, swords do (getAttackDamageBonus() + 4) damage.
+                2.5f,
+            // Determines the enchantability of the tier. This represents how good the enchantments on this tool will be.
+                25,
+            // Determines the repair ingredient of the tier. Use a supplier for lazy initializing.
+                () -> Ingredient.of(stygian_iron_ingot.get())
+            );
             
             //SI tools
-            //TODO: make tools functional
-            public static final DeferredItem<Item> stygian_iron_sword = ITEMS.registerItem("stygian_iron_sword", null);
-            public static final DeferredItem<Item> stygian_iron_pickaxe = ITEMS.registerItem("stygian_iron_pickaxe", null);
-            public static final DeferredItem<Item> stygian_iron_axe = ITEMS.registerItem("stygian_iron_axe", null);
-            public static final DeferredItem<Item> stygian_iron_shovel = ITEMS.registerItem("stygian_iron_shovel", null);
-            public static final DeferredItem<Item> stygian_iron_hoe = ITEMS.registerItem("stygian_iron_hoe", null);
-           
+            public static final DeferredItem<SwordItem> stygian_iron_sword = ITEMS.register("stygian_iron_sword", () -> new SwordItem(
+        // The tier to use.
+        STYGIAN_IRON_TIER,
+        // The item properties. We don't need to set the durability here because TieredItem handles that for us.
+            new Item.Properties().attributes(
+            // There are `createAttributes` methods in either the class or subclass of each DiggerItem
+                SwordItem.createAttributes(
+                    // The tier to use.
+                    STYGIAN_IRON_TIER,
+                    // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
+                    3,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
+                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
+                    -2.4f
+            
+                    )
+            
+                )
+            )
+            );
+
+            public static final DeferredItem<PickaxeItem> stygian_iron_pickaxe = ITEMS.register("stygian_iron_pickaxe", () -> new PickaxeItem(
+        // The tier to use.
+        STYGIAN_IRON_TIER,
+        // The item properties. We don't need to set the durability here because TieredItem handles that for us.
+            new Item.Properties().attributes(
+            // There are `createAttributes` methods in either the class or subclass of each DiggerItem
+                PickaxeItem.createAttributes(
+                    // The tier to use.
+                    STYGIAN_IRON_TIER,
+                    // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
+                    1,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
+                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
+                    -2.8f
+            
+                    )
+            
+                )
+            )
+            );
+
+            public static final DeferredItem<AxeItem> stygian_iron_axe = ITEMS.register("stygian_iron_axe", () -> new AxeItem(
+        // The tier to use.
+        STYGIAN_IRON_TIER,
+            new Item.Properties().attributes(
+                AxeItem.createAttributes(
+                    STYGIAN_IRON_TIER,
+                    // The type-specific attack damage bonus.
+                    3,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4.
+                    -2.4f
+                    )
+                )
+            )
+            );
+            
+            public static final DeferredItem<ShovelItem> stygian_iron_shovel = ITEMS.register("stygian_iron_shovel", () -> new ShovelItem(
+        // The tier to use.
+        STYGIAN_IRON_TIER,
+        // The item properties. We don't need to set the durability here because TieredItem handles that for us.
+            new Item.Properties().attributes(
+            // There are `createAttributes` methods in either the class or subclass of each DiggerItem
+                ShovelItem.createAttributes(
+                    // The tier to use.
+                    STYGIAN_IRON_TIER,
+                    // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
+                    1.5f,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
+                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
+                    -3f
+            
+                    )
+            
+                )
+            )
+            );
+            
+            public static final DeferredItem<HoeItem> stygian_iron_hoe = ITEMS.register("stygian_iron_hoe", () -> new HoeItem(
+                // The tier to use.
+                STYGIAN_IRON_TIER,
+                    new Item.Properties().attributes(
+                        HoeItem.createAttributes(
+                            STYGIAN_IRON_TIER,
+                            // The type-specific attack damage bonus.
+                            3,
+                            // The type-specific attack speed modifier. The player has a default attack speed of 4.
+                            -2.4f
+                            )
+                        )
+                    )
+                    );
            //SI Armor
            //TODO: make armor functional
-            public static final DeferredItem<Item> stygian_iron_helmet = ITEMS.registerItem("stygian_iron_helmet", null);
+           /* public static final DeferredItem<Item> stygian_iron_helmet = ITEMS.registerItem("stygian_iron_helmet", null);
             public static final DeferredItem<Item> stygian_iron_chestplate = ITEMS.registerItem("stygian_iron_chestplate", null);
             public static final DeferredItem<Item> stygian_iron_leggings = ITEMS.registerItem("stygian_iron_leggings", null);
-            public static final DeferredItem<Item> stygian_iron_boots = ITEMS.registerItem("stygian_iron_boots", null);
+            public static final DeferredItem<Item> stygian_iron_boots = ITEMS.registerItem("stygian_iron_boots", null); */
 
             // Creates a creative tab with the id "mythos:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
@@ -236,10 +408,10 @@ public class MythosRegistry
                 output.accept(celestial_bronze_shovel.get());
                 output.accept(celestial_bronze_hoe.get());
                 //CB ARMOR
-                output.accept(celestial_bronze_helmet.get());
+                /* output.accept(celestial_bronze_helmet.get());
                 output.accept(celestial_bronze_chestplate.get());
                 output.accept(celestial_bronze_leggings.get());
-                output.accept(celestial_bronze_boots.get());
+                output.accept(celestial_bronze_boots.get()); */
 
                 //SI
                 output.accept(stygian_iron_block_item.get());
@@ -252,10 +424,10 @@ public class MythosRegistry
                 output.accept(stygian_iron_shovel.get());
                 output.accept(stygian_iron_hoe.get());
                 //CB ARMOR
-                output.accept(stygian_iron_helmet.get());
+                /* output.accept(stygian_iron_helmet.get());
                 output.accept(stygian_iron_chestplate.get());
                 output.accept(stygian_iron_leggings.get());
-                output.accept(stygian_iron_boots.get());
+                output.accept(stygian_iron_boots.get()); */
                 // Add items and other unique things to the creative menu here. This method is preferred over the event (ln 145) for most things.
             }).build());
 
