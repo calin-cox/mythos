@@ -81,7 +81,10 @@ public class MythosRegistry
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> Ambrosia.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(Ambrosia.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(Ambrosia.get());
+                output.accept(ash.get());
+                output.accept(ichor.get());
+                // Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
