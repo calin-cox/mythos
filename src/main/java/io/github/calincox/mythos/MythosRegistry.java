@@ -198,6 +198,30 @@ public class MythosRegistry
         //onyx. see prior note.
             if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
                 event.accept(onyx_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(cobbled_onyx_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(onyx_brick_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(cracked_onyx_brick_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(smooth_onyx_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(mossy_onyx_brick_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(chiseled_onyx_brick_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(onyx_pillar_item);
+
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+                event.accept(cracked_onyx_pillar_item);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
