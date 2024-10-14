@@ -8,11 +8,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -27,6 +31,8 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.common.SimpleTier;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -122,15 +128,58 @@ public class MythosRegistry
 
 
     //METALS AND THEIR RELATED BITS
+    
         //Celestial Bronze
             public static final DeferredBlock<Block> celestial_bronze_block = BLOCKS.registerSimpleBlock("celestial_bronze_block", BlockBehaviour.Properties.of().explosionResistance(25));
             public static final DeferredItem<BlockItem> celestial_bronze_block_item = ITEMS.registerSimpleBlockItem("celestial_bronze_block", celestial_bronze_block);
             public static final DeferredItem<Item> celestial_bronze_ingot = ITEMS.registerItem("celestial_bronze_ingot", null);
             public static final DeferredItem<Item> celestial_bronze_nugget = ITEMS.registerItem("celestial_bronze_nugget", null);
             
+
+
             //CB tools
             //TODO: make tools functional
-            public static final DeferredItem<Item> celestial_bronze_sword = ITEMS.registerItem("celestial_bronze_sword", null);
+
+            //but first, TIERS! #TODO
+    public static final Tier CELESTIAL_BRONZE_TIER = new SimpleTier(
+        // The tag that determines what blocks this tool cannot break.
+        BlockTags.INCORRECT_FOR_DIAMOND_TOOL ,
+        // Determines the durability of the tier.
+        // Stone is 131, iron is 250.
+        1000,
+        // Determines the mining speed of the tier. Unused by swords.
+        // Stone uses 4, iron uses 6.
+        8,
+        // Determines the attack damage bonus. Different tools use this differently. For example, swords do (getAttackDamageBonus() + 4) damage.
+        // Stone uses 1, iron uses 2, corresponding to 5 and 6 attack damage for swords, respectively.
+        2.5f,
+        // Determines the enchantability of the tier. This represents how good the enchantments on this tool will be.
+        // Gold uses 22, we put CELESTIAL_BRONZE slightly above that.
+        25,
+        // Determines the repair ingredient of the tier. Use a supplier for lazy initializing.
+        () -> Ingredient.of(celestial_bronze_ingot.get()));
+
+        public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
+
+            public static final Supplier<Item> celestial_bronze_sword = ITEMS.register("celestial_bronze_sword", () -> new SwordItem(
+        // The tier to use.
+        CELESTIAL_BRONZE_TIER,
+        // The item properties. We don't need to set the durability here because TieredItem handles that for us.
+            new Item.Properties().attributes(
+            // There are `createAttributes` methods in either the class or subclass of each DiggerItem
+                SwordItem.createAttributes(
+                    // The tier to use.
+                    CELESTIAL_BRONZE_TIER,
+                    // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
+                    3,
+                    // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
+                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
+                    -2.4f
+            
+                )
+            )
+        )
+        );
             public static final DeferredItem<Item> celestial_bronze_pickaxe = ITEMS.registerItem("celestial_bronze_pickaxe", null);
             public static final DeferredItem<Item> celestial_bronze_axe = ITEMS.registerItem("celestial_bronze_axe", null);
             public static final DeferredItem<Item> celestial_bronze_shovel = ITEMS.registerItem("celestial_bronze_shovel", null);
