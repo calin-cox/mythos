@@ -20,7 +20,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 public class init {
 
     private static final Logger LOGGER = LogUtils.getLogger();
-    private static final String MODID = "mythos";
+    public static final String MODID = "mythos";
 
 
     @SubscribeEvent
