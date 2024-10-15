@@ -46,8 +46,8 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(MythosRegistry.MODID)
-public class MythosRegistry
+@Mod(items.MODID)
+public class items
 {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "mythos";
@@ -62,64 +62,7 @@ public class MythosRegistry
 
     // Creates a new Block with the id "mythos:example_block", combining the namespace and path
    
-    //Blocks
-        
-        //Marble, the Paradigm. Notice the itemstate of the block is implemented here, rather than with items.
-    public static final DeferredBlock<Block> marble = BLOCKS.registerSimpleBlock("marble", BlockBehaviour.Properties.of().mapColor(MapColor.STONE).destroyTime(3/2).speedFactor(4/3));
-        // Creates a new BlockItem with the id "mythos:example_block", combining the namespace and path
-        public static final DeferredItem<BlockItem> marble_item = ITEMS.registerSimpleBlockItem("marble", marble);
-
-        //variants of marble
-            //polished marble
-            public static final DeferredBlock<Block> polished_marble = BLOCKS.registerSimpleBlock("polished_marble", BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY));
-            public static final DeferredItem<BlockItem> polished_marble_item = ITEMS.registerSimpleBlockItem("polished_marble", polished_marble);
-            //cut marble
-            public static final DeferredBlock<Block> cut_marble = BLOCKS.registerSimpleBlock("cut_marble", BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY));
-            public static final DeferredItem<BlockItem> cut_marble_item = ITEMS.registerSimpleBlockItem("cut_marble", cut_marble);
-            //marble pillars!
-            public static final DeferredBlock<Block> marble_pillar = BLOCKS.registerSimpleBlock("marble_pillar", BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY));
-            public static final DeferredItem<BlockItem> marble_pillar_item = ITEMS.registerSimpleBlockItem("marble_pillar", marble_pillar);
-            //cracked marble pillars!
-            public static final DeferredBlock<Block> cracked_marble_pillar = BLOCKS.registerSimpleBlock("cracked_marble_pillar", BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY));
-            public static final DeferredItem<BlockItem> cracked_marble_pillar_item = ITEMS.registerSimpleBlockItem("cracked_marble_pillar", cracked_marble_pillar);
-            //mosaic tiles!
-            public static final DeferredBlock<Block> marble_mosaic = BLOCKS.registerSimpleBlock("marble_mosaic", BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY));
-            public static final DeferredItem<BlockItem> marble_mosaic_item = ITEMS.registerSimpleBlockItem("marble_mosaic", marble_mosaic);
-
-        //onyx!
-            public static final DeferredBlock<Block> onyx = BLOCKS.registerSimpleBlock("onyx", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> onyx_item = ITEMS.registerSimpleBlockItem("onyx", onyx );
-            // cobbled onyx
-            public static final DeferredBlock<Block> cobbled_onyx = BLOCKS.registerSimpleBlock("cobbled_onyx", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> cobbled_onyx_item = ITEMS.registerSimpleBlockItem("cobbled_onyx", cobbled_onyx );
-            //smooth onyx
-            public static final DeferredBlock<Block> smooth_onyx = BLOCKS.registerSimpleBlock("smooth_onyx", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> smooth_onyx_item = ITEMS.registerSimpleBlockItem("smooth_onyx", smooth_onyx );
-            //onyx bricks
-            public static final DeferredBlock<Block> onyx_brick = BLOCKS.registerSimpleBlock("onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> onyx_brick_item = ITEMS.registerSimpleBlockItem("onyx_brick", onyx_brick );
-            //chiseled onyx bricks
-            public static final DeferredBlock<Block> chiseled_onyx_brick = BLOCKS.registerSimpleBlock("chiseled_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> chiseled_onyx_brick_item = ITEMS.registerSimpleBlockItem("chiseled_onyx_brick", chiseled_onyx_brick );
-            //cracked onyx bricks
-            public static final DeferredBlock<Block> cracked_onyx_brick = BLOCKS.registerSimpleBlock("cracked_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> cracked_onyx_brick_item = ITEMS.registerSimpleBlockItem("cracked_onyx_brick", cracked_onyx_brick );
-            //mossy onyx bricks
-            public static final DeferredBlock<Block> mossy_onyx_brick = BLOCKS.registerSimpleBlock("mossy_onyx_brick", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> mossy_onyx_brick_item = ITEMS.registerSimpleBlockItem("mossy_onyx_brick", mossy_onyx_brick );
-            //onyx pillars
-            public static final DeferredBlock<Block> onyx_pillar = BLOCKS.registerSimpleBlock("onyx_pillar", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> onyx_pillar_item = ITEMS.registerSimpleBlockItem("onyx_pillar", onyx_pillar);
-            //cracked onyx pillars
-            public static final DeferredBlock<Block> cracked_onyx_pillar = BLOCKS.registerSimpleBlock("cracked_onyx_pillar", BlockBehaviour.Properties.of().isRedstoneConductor(true).jumpFactor(1/2));
-            public static final DeferredItem<BlockItem> cracked_onyx_pillar_item = ITEMS.registerSimpleBlockItem("cracked_onyx_pillar", cracked_onyx_pillar);
-
-        //FANCYBLOCKS (for labyrinth use)
-            public static final DeferredBlock<Block> mycenean_brick = BLOCKS.registerSimpleBlock("mycenean_brick", BlockBehaviour.Properties.of().destroyTime(-1));
-            public static final DeferredBlock<Block> chiseled_mycenean_brick = BLOCKS.registerSimpleBlock("chiseled_mycenean_brick", BlockBehaviour.Properties.of().destroyTime(-1));
-            public static final DeferredBlock<Block> mycenean_pillar = BLOCKS.registerSimpleBlock("mycenean_pillar", BlockBehaviour.Properties.of().destroyTime(-1));
-     
-     
+    
     //Items
      
         //Ash
@@ -269,18 +212,17 @@ public class MythosRegistry
             public static final DeferredItem<Item> stygian_iron_nugget = ITEMS.registerSimpleItem("stygian_iron_nugget", new Item.Properties());
 
         //SI Tier
-        //TODO: MAKE THE TIER DIFFERENT FROM CB
         public static final Tier STYGIAN_IRON_TIER = new SimpleTier(
             // The tag that determines what blocks this tool cannot break.
             BlockTags.INCORRECT_FOR_DIAMOND_TOOL ,
             // Determines the durability of the tier.
-                1000,
+                3000,
             // Determines the mining speed of the tier. Unused by swords.
-                8,
+                16,
             // Determines the attack damage bonus. Different tools use this differently. For example, swords do (getAttackDamageBonus() + 4) damage.
-                2.5f,
+                4,
             // Determines the enchantability of the tier. This represents how good the enchantments on this tool will be.
-                25,
+                22,
             // Determines the repair ingredient of the tier. Use a supplier for lazy initializing.
                 () -> Ingredient.of(stygian_iron_ingot.get())
             );
@@ -298,9 +240,7 @@ public class MythosRegistry
                     // The type-specific attack damage bonus. 3 for swords, 1.5 for shovels, 1 for pickaxes, varying for axes and hoes.
                     3,
                     // The type-specific attack speed modifier. The player has a default attack speed of 4, so to get to the desired
-                    // value of 1.6f, we use -2.4f. -2.4f for swords, -3f for shovels, -2.8f for pickaxes, varying for axes and hoes.
                     -2.4f
-            
                     )
             
                 )
@@ -433,10 +373,9 @@ public class MythosRegistry
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public MythosRegistry(IEventBus modEventBus, ModContainer modContainer)
+    public items(IEventBus modEventBus, ModContainer modContainer)
     {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+       
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
@@ -444,103 +383,6 @@ public class MythosRegistry
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
-
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (mythos) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
-        NeoForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
-
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-        // Some common setup code -- not sure what this does
-        LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
-
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
-    }
-
-    // creative mode item tab registration -- important for testing without JEI / REI / other Dataminers -- 
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        //marble -- notice that it is currently being registered to the Vanilla BUILDING BLOCKS tab. 
-        //There is other creative mode registration for the custom tab later.
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(marble_item);
-
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(marble_mosaic_item);
-
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(marble_pillar_item);
-
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(cracked_marble_pillar_item);
-
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(polished_marble_item);
-
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(cut_marble_item);
-
-            
-        //onyx. see prior note.
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(onyx_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(cobbled_onyx_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(onyx_brick_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(cracked_onyx_brick_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(smooth_onyx_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(mossy_onyx_brick_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(chiseled_onyx_brick_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(onyx_pillar_item);
-
-            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-                event.accept(cracked_onyx_pillar_item);
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-        }
-    }
+    
 }
