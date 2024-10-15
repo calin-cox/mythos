@@ -21,7 +21,42 @@ BLOCKS
     mycenean_pillar
             (These last three are for the Labyrinth, so make sure all 6 sides are functional useful!)
 
-ITEMS  
+METALS TOOLS AND ARMOR
+Celestial Bronze, a metal made with iron, copper, gold, and a little bit of ichor.
+    Block
+    Ingot
+    Nugget
+        Axe
+        Pickaxe
+        Shovel
+        Hoe
+        Sword
+            Helmet
+            Chestplate
+            Leggings
+            Boots
+                (For the armor, you'll have to make both a 2d texture, for its NEI listing and in inventories,
+                as well as a 3d texture, to be rendered over the player. We'll circle back to those 3d renders later.)
+
+Stygian Iron, a metal made by soaking iron in the river Styx.
+    Block
+    Ingot
+    Nugget
+        Axe
+        Pickaxe
+        Shovel
+        Hoe
+        Sword
+            Helmet
+            Chestplate
+            Leggings
+            Boots
+                (For the armor, you'll have to make both a 2d texture, for its NEI listing and in inventories,
+                as well as a 3d texture, to be rendered over the player. We'll circle back to those 3d renders later.)
+
+
+
+UNIQUE ITEMS  
     The Master Bolt
         (3D Model, please! I have a method for this, when you get there.)
     The Hearth of Hestia
