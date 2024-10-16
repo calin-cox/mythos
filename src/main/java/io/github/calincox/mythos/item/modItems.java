@@ -294,28 +294,28 @@ public class modItems
             public static final DeferredItem<ArmorItem> stygian_iron_helmet = ITEMS.register("stygian_iron_helmet", () ->
                 new ArmorItem(armorMaterials.STYGIAN_IRON_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
            //                  the armor material ^                  the armor type ^
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(33))
                        //item properties ^
                 )
             );
             public static final DeferredItem<ArmorItem> stygian_iron_chestplate = ITEMS.register("stygian_iron_chestplate", () ->
                 new ArmorItem(armorMaterials.STYGIAN_IRON_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
            //                  the armor material ^                  the armor type ^
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(33))
                        //item properties ^
                 )
             );
             public static final DeferredItem<ArmorItem> stygian_iron_leggings = ITEMS.register("stygian_iron_leggings", () ->
                 new ArmorItem(armorMaterials.STYGIAN_IRON_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
            //                  the armor material ^                  the armor type ^
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(33))
                        //item properties ^
                 )
             );
             public static final DeferredItem<ArmorItem> stygian_iron_boots = ITEMS.register("stygian_iron_boots", () ->
                 new ArmorItem(armorMaterials.STYGIAN_IRON_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
            //                  the armor material ^                  the armor type ^
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(33))
                        //item properties ^
                 )
             ); 
