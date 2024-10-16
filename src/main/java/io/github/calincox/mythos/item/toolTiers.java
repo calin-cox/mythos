@@ -9,7 +9,7 @@ import net.neoforged.neoforge.common.SimpleTier;
 public class toolTiers
 {
 
-
+//class used for determining preset data for tiers of tool
 
     public static final Tier CELESTIAL_BRONZE_TIER = new SimpleTier(
         // The tag that determines what blocks this tool cannot break.
