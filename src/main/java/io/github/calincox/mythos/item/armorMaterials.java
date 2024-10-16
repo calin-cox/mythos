@@ -20,14 +20,13 @@ import java.util.List;
 
 public class armorMaterials {
 
-    //TODO: DIFFERENTIATE BETWEEN CB AND SI ARMORS
     //TODO: FIX ARMOR DURABILITY DURING REGISTRY
     public static final Holder<ArmorMaterial> CELESTIAL_BRONZE_ARMOR_MATERIAL = register("celestial_bronze",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 5);
-                attribute.put(ArmorItem.Type.LEGGINGS, 7);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 9);
-                attribute.put(ArmorItem.Type.HELMET, 5);
+                attribute.put(ArmorItem.Type.BOOTS, 3);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
+                attribute.put(ArmorItem.Type.HELMET, 3);
                 attribute.put(ArmorItem.Type.BODY, 11);
             }), 20, 2f, 0.1f, () -> modItems.celestial_bronze_ingot.get());
 
@@ -38,7 +37,7 @@ public class armorMaterials {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 9);
                 attribute.put(ArmorItem.Type.HELMET, 5);
                 attribute.put(ArmorItem.Type.BODY, 11);
-            }), 20, 2f, 0.1f, () -> modItems.stygian_iron_ingot.get());
+            }), 20, 2f, 0.2f, () -> modItems.stygian_iron_ingot.get());
 
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,

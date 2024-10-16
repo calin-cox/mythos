@@ -161,7 +161,6 @@ public class modItems
                     );
            
            //CB Armor
-           //TODO: make armor functional
 
 
 
