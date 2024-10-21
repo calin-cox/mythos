@@ -1,5 +1,5 @@
 BLOCKS
-    marble
+    marble (Look at Diorite for similar texture)
     polished_marble
     cut_marble
     marble_pillar
