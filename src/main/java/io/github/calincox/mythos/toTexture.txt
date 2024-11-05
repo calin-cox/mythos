@@ -1,15 +1,15 @@
 BLOCKS
-    marble (Look at Diorite for similar texture)
-    polished_marble
-    cut_marble
-    marble_pillar
-    cracked_marble_pillar
-    marble_mosaic
+   ☺ marble (Look at Diorite for similar texture)
+   ☺ polished_marble
+   ☺ cut_marble
+   ☺ marble_pillar
+   ☺ cracked_marble_pillar
+   ☺ marble_mosaic
 
-    onyx
-    cobbled_onyx
-    smooth_onyx
-    onyx_brick
+   ☺ onyx
+   ☺ cobbled_onyx
+   ☺ smooth_onyx
+   ☺ onyx_brick
     chiseled_onyx_brick
     cracked_onyx_brick
     mossy_onyx_brick
